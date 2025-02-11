@@ -2,8 +2,9 @@ import "./CartCard.css";
 import { useDispatch } from "react-redux";
 import { remove } from "../store/cartSlice";
 export const CartCard = ({product}) => {
-  const {name, price, image} = product;
   const dispatch=useDispatch();
+  const {name, price, image} = product;
+ 
 
    
   return (

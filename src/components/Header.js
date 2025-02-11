@@ -5,7 +5,7 @@ import "./Header.css";
 
 export const Header = () => {
   //to access all state infor from store and we store it into products varible as follow
-  const products=useSelector(state=>state.cartState.cartList);
+  const cartList=useSelector(state=>state.cartState.cartList);
 
   return (
     <header>
@@ -18,7 +18,7 @@ export const Header = () => {
         <NavLink to="/cart" className="link">Cart</NavLink>
       </nav>
       <Link to="/cart" className="items">
-        <span>Cart:{products.length}</span>
+        <span>Cart:{cartList.length}</span>
       </Link>
     </header>
   )

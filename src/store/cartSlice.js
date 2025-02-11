@@ -21,7 +21,8 @@ const cartSlice=createSlice(
          return{...state,total:total,cartList:updatedCartList}
         },
         remove(state,action){
-            const updatedCartList=state.cartList.filter((current)=>current.id===action.payload.id);
+          //The id which match that remove. and put the id is no match with filter method
+            const updatedCartList=state.cartList.filter((item=>item.id!==action.payload.id));
             const total=state.total-action.payload.price;
             return{...state,total:total, cartList:updatedCartList}
             
